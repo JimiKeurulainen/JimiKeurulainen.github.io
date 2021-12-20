@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/css/main.5739ad41.chunk.css",
-    "main.js": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/main.2b6ecb46.chunk.js",
-    "main.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/main.2b6ecb46.chunk.js.map",
-    "runtime-main.js": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/runtime-main.cf89b003.js",
-    "runtime-main.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/runtime-main.cf89b003.js.map",
-    "static/js/2.ec299e81.chunk.js": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/2.ec299e81.chunk.js",
-    "static/js/2.ec299e81.chunk.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/2.ec299e81.chunk.js.map",
-    "static/js/3.c0cba19b.chunk.js": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/3.c0cba19b.chunk.js",
-    "static/js/3.c0cba19b.chunk.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/3.c0cba19b.chunk.js.map",
-    "index.html": "/JimiKeurulainen/JimiKeurulainen.github.io.git/index.html",
-    "static/css/main.5739ad41.chunk.css.map": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/css/main.5739ad41.chunk.css.map",
-    "static/js/2.ec299e81.chunk.js.LICENSE.txt": "/JimiKeurulainen/JimiKeurulainen.github.io.git/static/js/2.ec299e81.chunk.js.LICENSE.txt"
+    "main.css": "/JimiKeurulainen/JimiKeurulainen.github.io/static/css/main.5739ad41.chunk.css",
+    "main.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/main.ff334538.chunk.js",
+    "main.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/main.ff334538.chunk.js.map",
+    "runtime-main.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/runtime-main.2c1f48a6.js",
+    "runtime-main.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/runtime-main.2c1f48a6.js.map",
+    "static/js/2.ec299e81.chunk.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/2.ec299e81.chunk.js",
+    "static/js/2.ec299e81.chunk.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/2.ec299e81.chunk.js.map",
+    "static/js/3.c0cba19b.chunk.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/3.c0cba19b.chunk.js",
+    "static/js/3.c0cba19b.chunk.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/3.c0cba19b.chunk.js.map",
+    "index.html": "/JimiKeurulainen/JimiKeurulainen.github.io/index.html",
+    "static/css/main.5739ad41.chunk.css.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/css/main.5739ad41.chunk.css.map",
+    "static/js/2.ec299e81.chunk.js.LICENSE.txt": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/2.ec299e81.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cf89b003.js",
+    "static/js/runtime-main.2c1f48a6.js",
     "static/js/2.ec299e81.chunk.js",
     "static/css/main.5739ad41.chunk.css",
-    "static/js/main.2b6ecb46.chunk.js"
+    "static/js/main.ff334538.chunk.js"
   ]
 }
