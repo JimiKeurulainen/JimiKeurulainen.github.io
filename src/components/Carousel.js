@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/index.css';
+import '../css/index.css';
 
 function Carousel() {
   const [count, setCount] = useState(0);
