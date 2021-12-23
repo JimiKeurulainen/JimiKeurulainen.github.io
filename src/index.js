@@ -7,10 +7,14 @@ import { HashRouter } from 'react-router-dom'
 
 ReactDOM.render(
   <HashRouter base="/">
-      <App />
-      <App />
-      <App />
-      <App />
+    <div>
+      React Test<br></br>
+      Bottom Text
+    </div>
+    <App />
+    <App />
+    <App />
+    <App />
   </HashRouter>,
   document.getElementById('root')
 );
