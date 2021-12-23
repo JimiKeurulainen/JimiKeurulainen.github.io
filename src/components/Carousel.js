@@ -6,8 +6,7 @@ function Carousel() {
 
   return (
     <div className="Carousel">
-      You have pressed the button {count} times<br />
-      <button onClick={() => setCount(count + 1)}>Piss me</button>
+
     </div>
   );
 }
