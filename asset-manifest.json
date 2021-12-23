@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/JimiKeurulainen/JimiKeurulainen.github.io/static/css/main.5739ad41.chunk.css",
-    "main.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/main.7687d42a.chunk.js",
-    "main.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/main.7687d42a.chunk.js.map",
+    "main.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/main.9f4377b4.chunk.js",
+    "main.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/main.9f4377b4.chunk.js.map",
     "runtime-main.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/runtime-main.2c1f48a6.js",
     "runtime-main.js.map": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/runtime-main.2c1f48a6.js.map",
     "static/js/2.2ece00cd.chunk.js": "/JimiKeurulainen/JimiKeurulainen.github.io/static/js/2.2ece00cd.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2c1f48a6.js",
     "static/js/2.2ece00cd.chunk.js",
     "static/css/main.5739ad41.chunk.css",
-    "static/js/main.7687d42a.chunk.js"
+    "static/js/main.9f4377b4.chunk.js"
   ]
 }
