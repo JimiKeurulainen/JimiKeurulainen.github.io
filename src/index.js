@@ -1,20 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import Carousel from './components/Carousel';
+
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom'
 
 ReactDOM.render(
   <HashRouter base="/">
-    <div>
-      React Test<br></br>
-      Bottom Text
+    <div className='Body'>
+      <div className='Header'>
+
+      </div>
+      <Carousel />
+      <div className='Navbar'>
+
+      </div>
+      <div className='Bottombody'>
+
+      </div>
     </div>
-    <App />
-    <App />
-    <App />
-    <App />
   </HashRouter>,
   document.getElementById('root')
 );
