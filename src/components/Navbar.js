@@ -1,43 +1,36 @@
 import React, { useState } from 'react';
 import '../css/index.css';
 
-function Btn(props) {
+function Navbar() {
   const { innerHeight: height } = window;
-  let margin = "0vh";
+  let margin = 0;
   const [pos, setPos] = useState(false);
   const togglePos = () => setPos(value => !value);
 
   if (pos === true) {
-    margin = "20vh";
+    margin = 20;
     window.scrollTo(0, height);
-    console.log(pos);
-  }
-  else if (pos === true && margin == "20vh") {
-    margin = "0vh";
-    window.scrollTo(0, 0);
-    console.log(pos);
   }
   else {
-    margin = "0vh";
+    margin = 0;
     window.scrollTo(0, 0);
-    console.log(pos);
   }
 
   const btnStyle = {
-    marginTop: margin
+    marginTop: `${margin}vh`
   }
 
-  return <button style={btnStyle} onClick={togglePos}>
-          {props.name}
-        </button>
-}
-
-function Navbar() {
   return (
     <div id='Navbar'>
-        <Btn name="GALLERY" />
-        <Btn name="ABOUT ME" />
-        <Btn name="CONTACT" />
+      <button style={btnStyle} onClick={togglePos}>
+        GALLERY
+      </button>
+      <button style={btnStyle} onClick={togglePos}>
+        ABOUT ME
+      </button>
+      <button style={btnStyle} onClick={togglePos}>
+        CONTACT
+      </button>
     </div>
   );
 }
