@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
+import Navbar from './Navbar';
 import '../css/index.css';
 
-function Carousel(props) {
-
+function Bottombody(props) {
   return (
     <div className="Carousel">
     <div>
-      <div style={{backgroundColor: "blue"}}>
+      <div style={{backgroundColor: "grey"}}>
         GALLERY
       </div>
       <div style={{backgroundColor: "green"}}>
@@ -20,4 +20,4 @@ function Carousel(props) {
   );
 }
 
-export default Carousel;
+export default Bottombody;

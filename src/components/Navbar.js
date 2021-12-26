@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLinkClickHandler } from 'react-router-dom';
 import '../css/index.css';
 
 function Btn(props) {
@@ -44,7 +45,7 @@ function Navbar() {
   const [active, setActive] = useState(4);
   const btnStyle = {
     marginTop: "0vh",
-    color: "black"
+    color: "black",
   }
 
   for (var i = 0; i < 3; i++) {
@@ -73,8 +74,8 @@ function Navbar() {
         posx={active * width}
         name={nameArray[active]}
         style={{
-          marginTop: "0vh",
-          color: "blue"
+          marginTop: "15vh",
+          borderTop: "5vh solid"
         }}
       />
     );
