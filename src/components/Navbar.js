@@ -1,58 +1,91 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/index.css';
 
+function btnHandler(props, func) {
+  props();
+  func();
+}
+
 function Btn(props) {
-  const btnStyle = {
-    marginTop: `${props.btnStyle}vh`,
-  };
-  const [color, setColor] = useState(false);
-  const toggleColor = () => setColor(value => !value);
-
-  color === true ? btnStyle.color = "blue" : btnStyle.color = "black";
-
-  if (color === true && props.active === true) {
+  if (props.posy === false) {
     return (
-      <button style={btnStyle} onClick={() => {props.func(); toggleColor();}}>
-        {props.name}
+      <button style={props.style} onClick={() => {
+        props.setActive(props.id);
+        props.togglePosy();
+        }}>
+        {props.name} {props.posy.toString()} <br></br>
+        {props.active}
       </button>
     )
   }
-  else if (props.active === false) {
+  else if (props.posy === true && props.active == props.id) {
     return (
-      <button style={btnStyle} onClick={() => {props.func(); toggleColor();}}>
-        {props.name}
+      <button style={props.style} onClick={() => {
+        props.togglePosy();
+        }}>
+        {props.name} {props.posy.toString()} <br></br>
+        {props.active}
       </button>
     )
   }
-  else if (props.active === true) {
+  else {
     return (
-      <button style={btnStyle} onClick={() => {toggleColor();}}>
-        {props.name}
+      <button style={props.style} onClick={() => {
+        props.setActive(props.id);
+        }}>
+        {props.name} {props.posy.toString()} <br></br>
+        {props.active}
       </button>
     )
   }
 }
 
 function Navbar() {
-  const { innerHeight: height } = window;
-  let margin = 0;
-  const [pos, setPos] = useState(false);
-  const togglePos = () => setPos(value => !value);
+  const nameArray = ["GALLERY", "ABOUT ME", "CONTACT"];
+  const btnArray = [];
+  const { innerHeight: height, innerWidth: width } = window;
+  const [posy, setPosy] = useState(false);
+  const togglePosy = () => setPosy(value => !value);
+  const [active, setActive] = useState(4);
 
-  if (pos === true) {
-    margin = 15;
-    window.scrollTo(0, height);
+  for (var i = 0; i < 3; i++) {
+    btnArray.push(
+      <Btn
+        id={i}
+        setActive={setActive}
+        active={active}
+        togglePosy={togglePosy}
+        posy={posy}
+        posx={i * width}
+        name={nameArray[i]}
+        style={{
+          marginTop: "0vh",
+          color: "black"
+        }}
+      />
+    )
   }
-  else {
-    margin = 0;
-    window.scrollTo(0, 0);
+  if (posy === true) {
+    btnArray.splice(active, 1, 
+      <Btn
+        id={active}
+        setActive={setActive}
+        active={active}
+        togglePosy={togglePosy}
+        posy={posy}
+        posx={active * width}
+        name={nameArray[active]}
+        style={{
+          marginTop: "0vh",
+          color: "blue"
+        }}
+      />    
+    );
   }
 
   return (
     <div id='Navbar'>
-      <Btn name="GALLERY" func={togglePos} active={pos} btnStyle={margin} />
-      <Btn name="ABOUT ME" func={togglePos} active={pos} btnStyle={margin} />
-      <Btn name="CONTACT" func={togglePos} active={pos} btnStyle={margin} />
+      {btnArray}
     </div>
   );
 }
