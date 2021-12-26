@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../css/index.css';
 
-function btnHandler(props, func) {
-  props();
-  func();
-}
-
 function Btn(props) {
   if (props.posy === false) {
     return (
@@ -47,6 +42,10 @@ function Navbar() {
   const [posy, setPosy] = useState(false);
   const togglePosy = () => setPosy(value => !value);
   const [active, setActive] = useState(4);
+  const btnStyle = {
+    marginTop: "0vh",
+    color: "black"
+  }
 
   for (var i = 0; i < 3; i++) {
     btnArray.push(
@@ -58,13 +57,11 @@ function Navbar() {
         posy={posy}
         posx={i * width}
         name={nameArray[i]}
-        style={{
-          marginTop: "0vh",
-          color: "black"
-        }}
+        style={btnStyle}
       />
     )
   }
+  // 
   if (posy === true) {
     btnArray.splice(active, 1, 
       <Btn
@@ -79,8 +76,13 @@ function Navbar() {
           marginTop: "0vh",
           color: "blue"
         }}
-      />    
+      />
     );
+    window.scrollBy(0, height);
+    btnStyle.marginTop = "15vh";
+  }
+  else {
+    window.scrollBy(0, -height);
   }
 
   return (
