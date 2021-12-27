@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Navbar from './Navbar';
 import '../css/index.css';
 
 function Bottombody(props) {
+  const myRef = useRef(null);
+  const { innerHeight: height, innerWidth: width } = window;
+  useEffect(() => {
+    myRef.current.scrollTo(props.state * width, 0);
+  })
+
   return (
-    <div className="Carousel">
-    <div>
+    <div id="Carousel" ref={myRef} >
+    <div className='Scrolled'>
       <div style={{backgroundColor: "grey"}}>
-        GALLERY
+        GALLERY {props.state * width}
       </div>
       <div style={{backgroundColor: "green"}}>
         ABOUT ME

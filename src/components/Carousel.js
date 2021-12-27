@@ -4,7 +4,7 @@ import '../css/index.css';
 function Carousel(props) {
 
   return (
-    <div className="Carousel">
+    <div id="Carousel">
     <div>
       <div style={{backgroundColor: "blue"}}>
         GALLERY
