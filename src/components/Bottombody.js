@@ -1,3 +1,6 @@
+// Code Author : Jimi Keurulainen
+// File Name : Bottombody.js
+
 import React, { useRef, useEffect } from 'react';
 import Navbar from './Navbar';
 import '../css/index.css';
@@ -13,7 +16,7 @@ function Bottombody(props) {
     <div id="Carousel" ref={myRef} >
     <div className='Scrolled'>
       <div style={{backgroundColor: "grey"}}>
-        GALLERY {props.state * width}
+        GALLERY
       </div>
       <div style={{backgroundColor: "green"}}>
         ABOUT ME

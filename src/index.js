@@ -1,3 +1,6 @@
+// Code Author : Jimi Keurulainen
+// File Name : index.js
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';

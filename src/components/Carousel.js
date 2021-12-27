@@ -1,3 +1,6 @@
+// Code Author : Jimi Keurulainen
+// File Name : Carousel.js
+
 import React, { useState } from 'react';
 import '../css/index.css';
 
