@@ -3,25 +3,42 @@
 
 import React, { useState, useEffect } from 'react';
 import '../css/index.css';
+import icon from '../angle-up-solid.svg'
 
 function ActiveBtn(props) {
   return (
-    <button 
+    <button
+    type="button"
     onClick={props.func}
     style={props.style}
     >
-      ^<br />{props.name}
+      <div style={{
+        backgroundColor: "red", 
+        flexGrow: "1",
+        animation: "ActiveBtn 0.2s linear"
+      }} >
+        <img src={icon} width={"10"} />
+      </div>
+      <div style={{
+        flexGrow: "3",
+      }}>
+        <h2>{props.name}</h2>
+      </div>
     </button>
   )
 }
 
 function Btn(props) {
   return (
-    <button 
+    <button
+    type="button"
     onClick={() => {props.func[0](props.id); props.func[1]();}} 
     style={props.style}
     >
-      {props.name}
+      <div style={{flexGrow: "1"}}><br /></div>
+      <div style={{flexGrow: "3"}}>
+        <h2>{props.name}</h2>
+      </div>
     </button>
   )
 }
@@ -40,7 +57,7 @@ function Navbar(props) {
   // Add three "default" buttons to an array
   for (var i = 0; i < 3; i++) {
     btnArray.push(
-      <Btn 
+      <Btn
         id={i}
         name={nameArray[i]}
         style={btnStyle}
@@ -57,7 +74,6 @@ function Navbar(props) {
   else {
     // Scroll down to the bottom div
     window.scrollBy(0, height);
-    btnStyle.marginTop = "15vh";
     // Replace the inactive buttons' functions,
     // Prevent inactive buttons from leading to the frontpage
     funcArray.splice(1, 1, console.log);
@@ -70,6 +86,7 @@ function Navbar(props) {
         func={togglePosy}
       />
     )
+    btnStyle.marginTop = "15vh";
   }
 
   return (
