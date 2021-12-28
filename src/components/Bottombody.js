@@ -7,8 +7,8 @@ import '../css/index.css';
 
 function Bottombody(props) {
   const myRef = useRef(null);
-  const { innerHeight: height, innerWidth: width } = window;
   useEffect(() => {
+    const { innerHeight: height, innerWidth: width } = window;
     myRef.current.scrollTo(props.state * width, 0);
   })
 

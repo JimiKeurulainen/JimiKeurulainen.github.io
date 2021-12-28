@@ -17,7 +17,7 @@ ReactDOM.render(
   <HashRouter base="/">
     <Body>
       <div className='Header'>
-        Jimi Keurulainen
+        <h1>Jimi Keurulainen</h1>
       </div>
       <Carousel />
     </Body>

@@ -1,46 +1,46 @@
 // Code Author : Jimi Keurulainen
 // File Name : Navbar.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import '../css/index.css';
 import icon from '../angle-up-solid.svg'
 
-function ActiveBtn(props) {
-  return (
-    <button
-    type="button"
-    onClick={props.func}
-    style={props.style}
-    >
-      <div style={{
-        backgroundColor: "red", 
-        flexGrow: "1",
-        animation: "ActiveBtn 0.2s linear"
-      }} >
-        <img src={icon} width={"10"} />
-      </div>
-      <div style={{
-        flexGrow: "3",
-      }}>
-        <h2>{props.name}</h2>
-      </div>
-    </button>
-  )
-}
-
 function Btn(props) {
-  return (
-    <button
-    type="button"
-    onClick={() => {props.func[0](props.id); props.func[1]();}} 
-    style={props.style}
-    >
-      <div style={{flexGrow: "1"}}><br /></div>
-      <div style={{flexGrow: "3"}}>
-        <h2>{props.name}</h2>
-      </div>
-    </button>
-  )
+  const [name, setName] = useState("FRONT PAGE")
+  if (props.active === false) {
+    return (
+      <button
+      type="button"
+      onClick={() => {props.func[0](props.id); props.func[1](); setName("FRONT PAGE");}} 
+      style={props.style}
+      >
+        <div style={{flexGrow: "1"}}><br /></div>
+        <div style={{flexGrow: "3"}}>
+          <h2>{props.name}</h2>
+        </div>
+      </button>
+    ) 
+  }
+  else if (props.active === true) {
+    return (
+      <button
+      type="button"
+      onClick={props.func}
+      style={props.style}
+      onMouseOver={() => {setName("FRONT PAGE");}}
+      onMouseOut={() => {setName(props.name);}}
+      >
+        <div id='Indicator'>
+          <img style={{filter: "invert()"}} src={icon} width={"10px"} />
+        </div>
+        <div style={{
+          flexGrow: "3",
+        }}>
+          <h2>{name}</h2>
+        </div>
+      </button>
+    )
+  }
 }
 
 function Navbar(props) {
@@ -58,6 +58,7 @@ function Navbar(props) {
   for (var i = 0; i < 3; i++) {
     btnArray.push(
       <Btn
+        active={false}
         id={i}
         name={nameArray[i]}
         style={btnStyle}
@@ -79,7 +80,8 @@ function Navbar(props) {
     funcArray.splice(1, 1, console.log);
     // Replace a default button with an active button
     btnArray.splice(props.state, 1, 
-      <ActiveBtn
+      <Btn
+        active={true}
         id={i}
         name={nameArray[props.state]}
         style={btnStyle}

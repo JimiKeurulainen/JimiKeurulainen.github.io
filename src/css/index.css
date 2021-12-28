@@ -27,6 +27,7 @@ code {
   background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0) 90%);
   position: absolute;
   text-align: center;
+  font-size: 2vmin;
   color: white;
 }
 #Carousel {
@@ -63,11 +64,21 @@ code {
   float: left;
   transition: margin-top 1s;
 }
+#Navbar > button:hover > #Indicator {
+  flex-grow: 10;
+  transition: all 0.5s;
+}
 #Navbar > button > div {
   width: 100%;
   display: flex;
   justify-content: center;
-  transform-origin: 50% 100%;
+  transform-origin: 50% 0%;
+}
+#Indicator {
+  flex-grow: 1;
+  background-color: black;
+  animation: ActiveBtn 0.2s;
+  transition: all 0.2s;
 }
 .Bottombody {
   height: 85vh;
@@ -78,8 +89,4 @@ code {
 @keyframes ActiveBtn {
   from {transform: scaleY(0);}
   to {transform: scaleY(1.0);}
-}
-@keyframes Btn {
-  from {margin-top: 0vh}
-  to {margin-top: 15vh}
 }

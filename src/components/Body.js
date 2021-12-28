@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import Bottombody from './Bottombody';
 
 function Body(props) {
-  const [active, setActive] = useState(3);
+  const [active, setActive] = useState(0);
 
   return (
     <div className="Body">
