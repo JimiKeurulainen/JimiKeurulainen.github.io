@@ -6,12 +6,9 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import Body from './components/Body';
 import Carousel from './components/Carousel';
-import Navbar from './components/Navbar';
-import Bottombody from './components/Bottombody';
 
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom'
-
 
 ReactDOM.render(
   <HashRouter base="/">

@@ -2,8 +2,18 @@
 // File Name : Bottombody.js
 
 import React, { useRef, useEffect } from 'react';
-import Navbar from './Navbar';
 import '../css/index.css';
+
+function Content(props) {
+  return (
+    <div>
+      <div>
+        <h1 style={{marginTop: "0"}} >{props.title}</h1>
+        <iframe src={props.text} />
+      </div>
+    </div>
+  )
+}
 
 function Bottombody(props) {
   const myRef = useRef(null);
@@ -15,15 +25,18 @@ function Bottombody(props) {
   return (
     <div id="Carousel" ref={myRef} >
     <div className='Scrolled'>
-      <div style={{backgroundColor: "grey"}}>
-        GALLERY
-      </div>
-      <div style={{backgroundColor: "green"}}>
-        ABOUT ME
-      </div>
-      <div style={{backgroundColor: "red"}}>
-        CONTACT
-      </div>
+      <Content 
+        title={"GALLERY"}
+        text={"gallery"}
+      />
+      <Content 
+        title={"ABOUT ME"}
+        text={"gallery"}
+      />
+      <Content 
+        title={"CONTACT"}
+        text={"gallery"}
+      />
     </div>
     </div>
   );
