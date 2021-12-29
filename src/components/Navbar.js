@@ -3,7 +3,7 @@
 
 import React, { useState, useRef } from 'react';
 import '../css/index.css';
-import icon from '../angle-up-solid.svg'
+import CaretU from '../Caret_U.svg'
 
 function Btn(props) {
   const [name, setName] = useState("FRONT PAGE")
@@ -31,7 +31,7 @@ function Btn(props) {
       onMouseOut={() => {setName(props.name);}}
       >
         <div id='Indicator'>
-          <img style={{filter: "invert()"}} src={icon} width={"10px"} />
+          <img style={{filter: "invert()"}} src={CaretU} width={"10px"} />
         </div>
         <div style={{
           flexGrow: "3",
@@ -66,7 +66,6 @@ function Navbar(props) {
       />
     )
   }
-
   if (posy === false) {
     // Scroll up to the frontpage
     window.scrollTo(0, 0);
