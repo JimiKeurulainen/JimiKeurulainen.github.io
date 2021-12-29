@@ -14,8 +14,8 @@ function Btn(props) {
       onClick={() => {props.func[0](props.id); props.func[1](); setName("FRONT PAGE");}} 
       style={props.style}
       >
-        <div style={{flexGrow: "1"}}><br /></div>
-        <div style={{flexGrow: "3"}}>
+        <div style={{flexBasis: "3vh"}}><br /></div>
+        <div style={{flexBasis: "12vh"}}>
           <h2>{props.name}</h2>
         </div>
       </button>
@@ -31,10 +31,10 @@ function Btn(props) {
       onMouseOut={() => {setName(props.name);}}
       >
         <div id='Indicator'>
-          <img style={{filter: "invert()"}} src={CaretU} width={"10px"} />
+          <img style={{filter: "invert()"}} src={CaretU} width={"20px"} />
         </div>
         <div style={{
-          flexGrow: "3",
+          flexBasis: "12vh",
         }}>
           <h2>{name}</h2>
         </div>
