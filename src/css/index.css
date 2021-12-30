@@ -37,14 +37,13 @@ article {
   width: 1.5vh;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
   border-radius: 3vh;
 }
 ::-webkit-scrollbar-button {
   height: 3vh;
 }
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 2vw;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -72,7 +71,7 @@ article {
 #Carousel {
   height: 85vh;
   width: 100vw;
-  background-image: linear-gradient(#8df5f8, white);
+  background-image: linear-gradient(#00b5b8, rgb(166,252,255));
   overflow: hidden;
   scroll-behavior: smooth;
 }
@@ -107,19 +106,19 @@ article {
   height: 85vh;
   padding: 0px 20px;
   margin: 0% 20%;
-  background-image: linear-gradient(rgba(231, 231, 231, 0.8), rgba(255, 255, 255, 0.5) 10%);
+  background-image: linear-gradient(rgba(166,252,255, 0.5), rgba(255, 255, 255, 0.5) 20%);
   border-radius: 3vh;
   overflow-y: auto;
 }
 #Navbar {
   height: 30vh;
   width: 100vw;
-  background-image: linear-gradient(#00b5b8 80%, #8df5f8);
+  background-image: linear-gradient(#008c8f, rgb(0, 181, 184));
 }
 #Navbar > button {
   height: 50%;
   width: 33.333%;
-  background-image: linear-gradient(#00b5b8, #8df5f8);
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   padding: 0;
   border: 0;
@@ -168,7 +167,7 @@ article {
 }
 @font-face {
   font-family: Barlow;
-  src: url('../fonts/Barlow-SemiBold.ttf');
+  src: url('../fonts/Barlow-Italic.ttf');
 }
 @font-face {
   font-family: BarlowText;
