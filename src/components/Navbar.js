@@ -11,7 +11,7 @@ function Btn(props) {
     return (
       <button
       type="button"
-      onClick={() => {props.func[0](props.key); props.func[1](); setName("FRONT PAGE");}} 
+      onClick={() => {props.func[0](props.id); props.func[1](); setName("FRONT PAGE");}} 
       style={props.style}
       >
         <div style={{flexBasis: "3vh"}}><br /></div>
@@ -64,6 +64,7 @@ function Navbar(props) {
     btnArray.push(
       <Btn
         key={i}
+        id={i}
         active={false}
         name={nameArray[i]}
         style={btnStyle}
@@ -85,7 +86,8 @@ function Navbar(props) {
     // Replace a default button with an active button
     btnArray.splice(props.state, 1, 
       <Btn
-        key={i}
+        key={props.state}
+        id={props.state}
         active={true}
         name={nameArray[props.state]}
         style={btnStyle}
