@@ -106,7 +106,7 @@ article {
   height: 85vh;
   padding: 0px 20px;
   margin: 0% 20%;
-  background-image: linear-gradient(rgba(166,252,255, 0.5), rgba(255, 255, 255, 0.5) 20%);
+  background-image: linear-gradient(rgba(219, 254, 255, 0.6), rgba(255, 255, 255, 0.6) 10%);
   border-radius: 3vh;
   overflow-y: auto;
 }
