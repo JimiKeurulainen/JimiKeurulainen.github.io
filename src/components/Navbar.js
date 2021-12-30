@@ -49,7 +49,7 @@ function Btn(props) {
 }
 
 function Navbar(props) {
-  const nameArray = ["GALLERY", "ABOUT ME", "CONTACT"];
+  const nameArray = ["MY PROJECTS", "ABOUT ME", "CONTACT"];
   const btnArray = [];
   const { innerHeight: height} = window;
   const [posy, setPosy] = useState(false);
@@ -77,7 +77,7 @@ function Navbar(props) {
     window.scrollTo(0, 0);
     btnStyle.marginTop = "0vh";
   }
-  else {
+  else if (posy === true) {
     // Scroll down to the bottom div
     window.scrollBy(0, height);
     // Replace the inactive buttons' functions,

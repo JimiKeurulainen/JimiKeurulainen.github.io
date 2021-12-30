@@ -4,7 +4,7 @@
 import React, { useRef, useEffect } from 'react';
 import DOMPurify from 'dompurify';
 import '../css/index.css';
-import gallery from '../text/gallery.js';
+import myProjects from '../text/myprojects.js';
 import aboutMe from '../text/aboutme.js';
 
 function Content(props) {
@@ -33,8 +33,8 @@ function Bottombody(props) {
     <div id="Carousel" ref={myRef} >
     <div className='Scrolled'>
       <Content 
-        title={"GALLERY"}
-        text={gallery}
+        title={"MY PROJECTS"}
+        text={myProjects}
       />
       <Content 
         title={"ABOUT ME"}

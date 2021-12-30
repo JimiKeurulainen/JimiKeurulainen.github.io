@@ -1,2 +1,0 @@
-let teksti = "Tämä on tekstiä galleria-sivulle";
-export default teksti;
