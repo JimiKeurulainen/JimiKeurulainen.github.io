@@ -1,7 +1,7 @@
 // Code Author : Jimi Keurulainen
 // File Name : Navbar.js
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import '../css/index.css';
 import CaretU from '../Caret_U.svg'
 
@@ -11,7 +11,7 @@ function Btn(props) {
     return (
       <button
       type="button"
-      onClick={() => {props.func[0](props.id); props.func[1](); setName("FRONT PAGE");}} 
+      onClick={() => {props.func[0](props.key); props.func[1](); setName("FRONT PAGE");}} 
       style={props.style}
       >
         <div style={{flexBasis: "3vh"}}><br /></div>
@@ -31,7 +31,12 @@ function Btn(props) {
       onMouseOut={() => {setName(props.name);}}
       >
         <div id='Indicator'>
-          <img style={{filter: "invert()"}} src={CaretU} width={"20px"} />
+          <img 
+            style={{filter: "invert()"}} 
+            src={CaretU} 
+            width={"20px"}
+            alt="Upwards arrow"
+          />
         </div>
         <div style={{
           flexBasis: "12vh",
@@ -58,8 +63,8 @@ function Navbar(props) {
   for (var i = 0; i < 3; i++) {
     btnArray.push(
       <Btn
+        key={i}
         active={false}
-        id={i}
         name={nameArray[i]}
         style={btnStyle}
         func={funcArray}
@@ -80,8 +85,8 @@ function Navbar(props) {
     // Replace a default button with an active button
     btnArray.splice(props.state, 1, 
       <Btn
+        key={i}
         active={true}
-        id={i}
         name={nameArray[props.state]}
         style={btnStyle}
         func={togglePosy}
