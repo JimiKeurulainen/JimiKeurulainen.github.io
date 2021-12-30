@@ -10,6 +10,7 @@ function Carousel(props) {
   const picArray = []
   const Carousel = useRef(null);
   const [count, setCount] = useState(0);
+  setTimeout(() => { setCount(count + 1); }, 5000)
   const {innerWidth: width } = window;
 
   useEffect(() => {

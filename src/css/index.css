@@ -1,3 +1,5 @@
+/* GENERAL CLASSES */
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,7 +12,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,10 +22,36 @@ h1 {
 h2 {
   font-family: BarlowIt;
 }
+h3 {
+  font-family: BarlowIt;
+  line-height: 2.5;
+}
+p {
+  line-height: 1.4;
+}
 article {
   font-family: BarlowText;
   font-size: large
 }
+::-webkit-scrollbar {
+  width: 1.5vh;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3vh;
+}
+::-webkit-scrollbar-button {
+  height: 3vh;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* CUSTOM CLASSES */
 
 .Body {
   height: 200vh;
@@ -34,7 +61,8 @@ article {
 .Header {
   height: 15vh;
   width: 100vw;
-  background-image: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0) 90%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  color: #BCFBDA;
   position: absolute;
   text-align: center;
   font-family: Barlow;
@@ -44,7 +72,7 @@ article {
 #Carousel {
   height: 85vh;
   width: 100vw;
-  background-color: rgb(201, 141, 62);
+  background-image: linear-gradient(#8df5f8, white);
   overflow: hidden;
   scroll-behavior: smooth;
 }
@@ -79,18 +107,20 @@ article {
   height: 85vh;
   padding: 0px 20px;
   margin: 0% 20%;
-  background-color: aliceblue;
-  overflow-y: scroll;
+  background-image: linear-gradient(rgba(231, 231, 231, 0.8), rgba(255, 255, 255, 0.5) 10%);
+  border-radius: 3vh;
+  overflow-y: auto;
 }
 #Navbar {
   height: 30vh;
   width: 100vw;
-  background-color: beige;
+  background-image: linear-gradient(#00b5b8 80%, #8df5f8);
 }
 #Navbar > button {
   height: 50%;
   width: 33.333%;
-  background-color: beige;
+  background-image: linear-gradient(#00b5b8, #8df5f8);
+  color: white;
   padding: 0;
   border: 0;
   display: flex;
@@ -113,20 +143,24 @@ article {
 }
 #Indicator {
   flex-basis: 3vh;
-  background-color: black;
+  background-color: #00000054;
   animation: ActiveBtn 0.2s;
   transition: all 0.2s;
 }
 .Bottombody {
   height: 85vh;
   width: 100vw;
-  background-color: rgb(45, 102, 102);
+  background-color: #8df5f8;
 }
+
+/* ANIMATIONS */
 
 @keyframes ActiveBtn {
   from {transform: scaleY(0);}
   to {transform: scaleY(1.0);}
 }
+
+/* FONTS */
 
 @font-face {
   font-family: BarlowIt;
