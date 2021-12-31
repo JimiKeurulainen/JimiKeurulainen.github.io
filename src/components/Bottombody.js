@@ -3,14 +3,15 @@
 
 import React, { useRef, useEffect } from 'react';
 import '../css/index.css';
-//import myProjects from '../text/myprojects.html';
 import aboutMe from '../text/aboutme.js';
 
 function Content(props) {
   return (
     <div>
       <div>
-        <h1>{props.title}</h1>
+        <div>
+          <h1>{props.title}</h1>
+        </div>
         <iframe title='textBox' src='myprojects.html' />
       </div>
     </div>
