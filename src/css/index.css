@@ -33,6 +33,16 @@ article {
   font-family: BarlowText;
   font-size: large
 }
+button {
+  padding: 0;
+  border: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* WEBKIT CLASSES */
+
 ::-webkit-scrollbar {
   width: 1.5vh;
 }
@@ -78,16 +88,21 @@ article {
   height: 10vh;
   width: 10vh;
   margin-top: 40vh;
-  padding: 0;
-  border: 0;
   position: absolute;
-  display: flex;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.2);
-  color: white;
   font-size: 5vmin;
+}
+#Navbar > button {
+  height: 50%;
+  width: 33.333%;
+  flex-direction: column;
+  float: left;
+  transition: margin-top 1s;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Barlow;
+  font-size: 2vmin;
 }
 .Scrolled {
   width: 300vw;
@@ -114,21 +129,7 @@ article {
   width: 100vw;
   background-image: linear-gradient(#00728f, #008bc2);
 }
-#Navbar > button {
-  height: 50%;
-  width: 33.333%;
-  padding: 0;
-  border: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  float: left;
-  transition: margin-top 1s;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  font-family: Barlow;
-  font-size: 2vmin;
-}
+
 #Navbar > button:hover > #Indicator {
   flex-basis: 10vh;
   transition: all 0.5s;
