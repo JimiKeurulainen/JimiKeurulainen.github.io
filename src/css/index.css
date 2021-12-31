@@ -60,33 +60,32 @@ article {
 .Header {
   height: 15vh;
   width: 100vw;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  color: #BCFBDA;
   position: absolute;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  color: white;
   text-align: center;
   font-family: Barlow;
   font-size: 2vmin;
-  color: white;
 }
 #Carousel {
   height: 85vh;
   width: 100vw;
-  background-image: linear-gradient(#008bc2, rgb(166, 242, 255));
   overflow: hidden;
   scroll-behavior: smooth;
+  background-image: linear-gradient(#008bc2, rgb(166, 242, 255));
 }
 #Carousel > button {
+  height: 10vh;
+  width: 10vh;
+  margin-top: 40vh;
+  padding: 0;
+  border: 0;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40vh;
-  padding: 0;
-  height: 10vh;
-  width: 10vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.2);
-  border: 0;
   color: white;
   font-size: 5vmin;
 }
@@ -104,11 +103,11 @@ article {
 .Scrolled > div > div {
   width: 60%;
   height: 85vh;
-  padding: 0px 20px;
   margin: 0% 20%;
+  padding: 0px 20px;
+  overflow-y: auto;
   background-image: linear-gradient(rgba(219, 254, 255, 0.6), rgba(255, 255, 255, 0.6) 10%);
   border-radius: 3vh;
-  overflow-y: auto;
 }
 #Navbar {
   height: 30vh;
@@ -118,8 +117,6 @@ article {
 #Navbar > button {
   height: 50%;
   width: 33.333%;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
   padding: 0;
   border: 0;
   display: flex;
@@ -127,6 +124,8 @@ article {
   align-items: center;
   float: left;
   transition: margin-top 1s;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
   font-family: Barlow;
   font-size: 2vmin;
 }
