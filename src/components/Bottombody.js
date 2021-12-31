@@ -2,47 +2,42 @@
 // File Name : Bottombody.js
 
 import React, { useRef, useEffect } from 'react';
-import DOMPurify from 'dompurify';
 import '../css/index.css';
-import myProjects from '../text/myprojects.js';
+//import myProjects from '../text/myprojects.html';
 import aboutMe from '../text/aboutme.js';
 
 function Content(props) {
-  const sanitizer = DOMPurify.sanitize;
   return (
     <div>
       <div>
         <h1>{props.title}</h1>
-        <article
-          style={{whiteSpace: "pre-wrap" }}
-          dangerouslySetInnerHTML={{__html: sanitizer(props.text)}} 
-        />
+        <iframe title='textBox' src='myprojects.html' />
       </div>
     </div>
   )
 }
 
 function Bottombody(props) {
-  const myRef = useRef(null);
+  const Carousel = useRef(null);
   useEffect(() => {
     const { innerWidth: width } = window;
-    myRef.current.scrollTo(props.state * width, 0);
+    Carousel.current.scrollTo(props.state * width, 0);
   })
 
   return (
-    <div id="Carousel" ref={myRef} >
+    <div id="Carousel" ref={Carousel} >
     <div className='Scrolled'>
       <Content 
         title={"MY PROJECTS"}
-        text={myProjects}
+        src={'myprojects.html'}
       />
       <Content 
         title={"ABOUT ME"}
-        text={aboutMe}
+        src={aboutMe}
       />
       <Content 
         title={"CONTACT"}
-        text={"gallery"}
+        src={"gallery"}
       />
     </div>
     </div>
