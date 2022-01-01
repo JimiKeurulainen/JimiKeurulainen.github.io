@@ -10,6 +10,16 @@ body {
   margin: 0 !important;
   padding: 0 !important;
 }
+/* Prevent super- and subscripts from
+   interfering with the line height */
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
 /* WEBKIT CLASSES */
 
 ::-webkit-scrollbar {
