@@ -22,7 +22,7 @@ function Bottombody(props) {
   const Carousel = useRef(null);
   useEffect(() => {
     const { innerWidth: width } = window;
-    Carousel.current.scrollTo(props.state * width, 0);
+    Carousel.current.scrollTo(props.active * width, 0);
   })
 
   return (
