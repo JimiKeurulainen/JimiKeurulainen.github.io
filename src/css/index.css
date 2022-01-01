@@ -138,6 +138,9 @@ button {
   width: 100vw;
   background-color: #8df5f8;
 }
+#TxtHeader {
+  width: 30%;
+}
 
 /* ANIMATIONS */
 

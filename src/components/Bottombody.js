@@ -6,13 +6,18 @@ import '../css/index.css';
 import aboutMe from '../text/aboutme.js';
 
 function Content(props) {
+  var source = props.src;
   return (
     <div>
       <div>
         <div>
-          <h1>{props.title}</h1>
+          <div id='TxtHeader'>
+            <h1>{props.title}</h1>
+          </div>
+          <div id='ScrollMenu'>
+          </div>
         </div>
-        <iframe title='textBox' src='myprojects.html' />
+        <iframe title='textBox' src={source} />
       </div>
     </div>
   )
@@ -34,11 +39,11 @@ function Bottombody(props) {
       />
       <Content 
         title={"ABOUT ME"}
-        src={aboutMe}
+        src={'aboutme.html'}
       />
       <Content 
         title={"CONTACT"}
-        src={"gallery"}
+        src={'contact.html'}
       />
     </div>
     </div>
