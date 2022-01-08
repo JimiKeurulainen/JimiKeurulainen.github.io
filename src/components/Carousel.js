@@ -19,22 +19,24 @@ function Carousel() {
   const [count, setCount] = useState(0);
   //setTimeout(() => { setCount(count + 1); }, 5000)
   const {innerWidth: width } = window;
+  // Import images from the image folder and map them to an object
   const images = importAll(require.context('../images', false, /(png|jpe?g|svg)$/));
+  const imgLen = Object.keys(images).length - 1;
 
   useEffect(() => {
-    if (count > 10) setCount(0)
-    if (count < 0) setCount(10)
+    if (count > imgLen) setCount(0);
+    if (count < 0) setCount(imgLen);
 
     Carousel.current.scrollTo(count * width, 0);
   }, [count, width]);
 
-  for (var i = 0; i < Object.keys(images).length; i++) {
+  for (const prop in images) {
     picArray.push(
       <div
-      key={i}
+      key={prop}
       style={{width: "100vw", position: "relative"}}>
-        <img className='Image' src={images[i].default} />
-        <img className='Background' src={images[i].default} />
+        <img className='Image' src={images[prop].default} />
+        <img className='Background' src={images[prop].default} />
       </div>
     )
   }
