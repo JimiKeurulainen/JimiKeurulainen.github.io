@@ -15,6 +15,7 @@ ReactDOM.render(
     <Body>
       <div className='Header'>
         <h1>Jimi Keurulainen</h1>
+        <p style={{color: "red"}}>Website isn't very responsive yet!</p>
       </div>
       <Carousel />
     </Body>

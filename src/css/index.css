@@ -41,6 +41,19 @@ button {
   align-items: center;
   color: white;
 }
+::-webkit-scrollbar {
+  width: 2vh;
+}
+::-webkit-scrollbar-track {
+  border-radius: 3vh;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 
 /* CUSTOM CLASSES */
 
@@ -53,6 +66,7 @@ button {
   height: 15vh;
   width: 100vw;
   position: absolute;
+  z-index: 2;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   color: white;
   text-align: center;
@@ -71,6 +85,7 @@ button {
   width: 10vh;
   margin-top: 40vh;
   position: absolute;
+  z-index: 2;
   justify-content: center;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.2);
@@ -101,7 +116,6 @@ button {
   width: 60%;
   height: 100%;
   margin: 0% 20%;
-  padding: 0px 0px 0px 20px;
   overflow-y: hidden;
   background-image: linear-gradient(rgba(219, 254, 255, 0.6), rgba(255, 255, 255, 0.6) 10%);
   border-radius: 3vh;
@@ -111,6 +125,20 @@ button {
   height: 10%;
   display: flex;
   align-items: center;
+}
+.Background {
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  object-fit: cover;
+  filter: blur(35px);
+}
+.Image {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  object-fit: contain;
 }
 #Navbar {
   height: 30vh;
@@ -140,6 +168,7 @@ button {
 }
 #TxtHeader {
   width: 30%;
+  padding-left: 10px;
 }
 
 /* ANIMATIONS */

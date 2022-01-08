@@ -3,15 +3,23 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import '../css/index.css';
-import CaretR from '../Caret_R.svg'
-import CaretL from '../Caret_L.svg'
+import CaretR from '../Caret_R.svg';
+import CaretL from '../Caret_L.svg';
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[index] = r(item); });
+  return images;
+}
+
 
 function Carousel() {
   const picArray = []
   const Carousel = useRef(null);
   const [count, setCount] = useState(0);
-  setTimeout(() => { setCount(count + 1); }, 5000)
+  //setTimeout(() => { setCount(count + 1); }, 5000)
   const {innerWidth: width } = window;
+  const images = importAll(require.context('../images', false, /(png|jpe?g|svg)$/));
 
   useEffect(() => {
     if (count > 10) setCount(0)
@@ -20,17 +28,13 @@ function Carousel() {
     Carousel.current.scrollTo(count * width, 0);
   }, [count, width]);
 
-  for (var i = 0; i < 11; i++) {
+  for (var i = 0; i < Object.keys(images).length; i++) {
     picArray.push(
       <div
       key={i}
-      style={{
-        backgroundColor: `rgb(${i*25}, 120, 120)`, 
-        paddingTop: "15vh",
-        width: "100vw"
-      }}>
-        PICTURE {i} <br />
-        {count}
+      style={{width: "100vw", position: "relative"}}>
+        <img className='Image' src={images[i].default} />
+        <img className='Background' src={images[i].default} />
       </div>
     )
   }

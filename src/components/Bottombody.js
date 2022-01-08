@@ -3,10 +3,11 @@
 
 import React, { useRef, useEffect } from 'react';
 import '../css/index.css';
-import aboutMe from '../text/aboutme.js';
 
 function Content(props) {
+  const Frame = useRef(null);
   var source = props.src;
+
   return (
     <div>
       <div>
@@ -17,7 +18,7 @@ function Content(props) {
           <div id='ScrollMenu'>
           </div>
         </div>
-        <iframe title='textBox' src={source} />
+        <iframe ref={Frame} title='textBox' src={source} />
       </div>
     </div>
   )
