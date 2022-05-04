@@ -4,14 +4,19 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@react-three/drei": "^9.5.7",
+    "@react-three/fiber": "^8.0.12",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "dompurify": "^2.3.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "drei": "^2.2.21",
+    "react": "^18.0",
+    "react-dom": "^18.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.139.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

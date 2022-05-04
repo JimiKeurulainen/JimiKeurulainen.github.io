@@ -5,8 +5,12 @@ import React, { useRef, useEffect } from 'react';
 import '../css/index.css';
 
 function Content(props) {
-  const Frame = useRef(null);
+  const Frame = useRef(0);
   var source = props.src;
+
+  useEffect(() => {
+    Frame.current.style.fontFamily = "Barlow";
+  });
 
   return (
     <div>

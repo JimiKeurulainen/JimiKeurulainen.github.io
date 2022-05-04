@@ -8,7 +8,10 @@ import CaretL from '../Caret_L.svg';
 
 function importAll(r) {
   let images = {};
-  r.keys().map((item, index) => { images[index] = r(item); });
+  r.keys().map((item, index) => { 
+    images[index] = r(item); 
+    return images;
+  });
   return images;
 }
 
@@ -28,15 +31,23 @@ function Carousel() {
     if (count < 0) setCount(imgLen);
 
     Carousel.current.scrollTo(count * width, 0);
-  }, [count, width]);
+  }, [count, width, imgLen]);
 
   for (const prop in images) {
     picArray.push(
       <div
       key={prop}
       style={{width: "100vw", position: "relative"}}>
-        <img className='Image' src={images[prop].default} />
-        <img className='Background' src={images[prop].default} />
+        <img 
+          src={images[prop].default} 
+          className='Image' 
+          alt={prop}
+        />
+        <img 
+          className='Background' 
+          src={images[prop].default} 
+          alt={prop}
+        />
       </div>
     )
   }
